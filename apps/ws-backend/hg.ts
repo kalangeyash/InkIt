@@ -1,1 +1,0 @@
-const yy :number = 2;
