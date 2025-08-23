@@ -14,6 +14,6 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
         req.userId = decoded.userId; 
         next();
     } catch {
-        res.status(403).json({ message: "Invalid token" });
+        res.status(403).json({ message: "Unauthorized" });
     }
 }

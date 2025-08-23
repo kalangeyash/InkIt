@@ -6,11 +6,9 @@ import { authMiddleware } from "./middleware";
 const app = express();
 
 app.get('/signup' ,(req,res)=>{
-    const body = req.body;
-
-
-
-    res.send(400)
+    res.send(200).json({
+        userId:1234
+    })
 })
 app.get('/signin' ,(req,res)=>{
     const body = req.body;
@@ -23,9 +21,11 @@ app.get('/signin' ,(req,res)=>{
     })
 })
 app.get('/room',authMiddleware ,(req,res)=>{
-    const body = req.body;
+    
 
-    res.send(400)
+    res.send(200).json({
+        roomId:123
+    })
 })
 
-app.listen(3001)
+app.listen(3001);
