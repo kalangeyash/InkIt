@@ -1,6 +1,6 @@
 import express from "express"
 import jwt from "jsonwebtoken"
-import { JWT_SECRET } from "./config";
+import { JWT_SECRET } from "/config";
 import { authMiddleware } from "./middleware";
 
 const app = express();
@@ -26,6 +26,6 @@ app.get('/room',authMiddleware ,(req,res)=>{
     res.send(200).json({
         roomId:123
     })
-})
+}) 
 
 app.listen(3001);
