@@ -29,4 +29,7 @@ model Chat{
   id    Int   @id @default(autoincrement())
   message String
   userId String
+  
 }
+
+27:00
