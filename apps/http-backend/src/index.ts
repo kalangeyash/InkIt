@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken"
 import { JWT_SECRET } from "@repo/backend-common/config";
 import { authMiddleware } from "./middleware";
 import { CreateUserSchema , SignInSchema , CreateRoomSchema } from "@repo/common/types.ts";
+import { prismaClient } from "@repo/db-common/client"
 
 const app = express();
 
