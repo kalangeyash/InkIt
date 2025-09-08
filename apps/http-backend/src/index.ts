@@ -31,7 +31,6 @@ app.get('/signin' ,(req,res)=>{
     }
     const userId = 1;
     const token = jwt.sign({userId},JWT_SECRET);
-    
 
     res.send({
         token
