@@ -31,7 +31,7 @@ app.get('/signup' ,async(req,res)=>{
     {
         res.status(411).json({message: "User already exists with this username"})
     }
-})
+}) 
 app.get('/signin' ,(req,res)=>{
     const data = SignInSchema.safeParse(req.body);
     if(!data.success)
