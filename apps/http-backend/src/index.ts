@@ -33,7 +33,7 @@ app.get('/signup' ,async(req,res)=>{
     }
 }) 
 app.get('/signin' ,(req,res)=>{
-    const data = SignInSchema.safeParse(req.body);
+    const data =  xnSignInSchema.safeParse(req.body);
     if(!data.success)
     { 
         res.json({
